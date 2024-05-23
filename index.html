@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FUNDÂO STREETWEAR</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="test">
+        <h3 class="logo">FUNDÃO STREEWEAR</h3>
+        <ul class="navegação">
+            <li><a href="#">LANÇAMENTOS</a></li>
+            <li><a href="#"></a>OFERTAS</li>
+            <li><a href="#">STREET CARD</a></li>
+            <li><a href="login/login.html">CADASTRE-SE</a></li>
+        </ul><!--navegação-->
+
+        <div class="header-icons">
+            <i class='bx bx-cart'></i>
+            <div id="menu"><i class='bx bx-menu'></i></div>
+        </div><!--header-icons-->
+    </header>
+
+    <section class="home">
+        <div class="home-img">
+            <img src="fotos/produto1.jpeg" class="one">
+        </div><!--home-img-->
+
+        <div class="home-text">
+
+            <h1 class="tittle">SHORTS JORDAN</h>
+            <p><h2 class="subtittle">Essentials</h2></p>
+            <h4 class="price">$199.00</h4>
+            <a href="#" class="btn">Shop Now</a>
+
+        </div><!--home-text-->
+    </section><!--home-->
+
+
+    <div class="main">
+        <div class="row">
+            <li><img data-tittle="SHORTS JORDAN" data-subtittle="ESSENTIALS" data-price="R$284,99"
+                    src="fotos/produto1.jpeg" onclick="slider(this)"></li>
+        </div><!--row-->
+
+        <div class="row2">
+            <li><img data-tittle="SHORTS NIKE" data-subtittle="CHALLENGER" data-price="R$218,49"
+                    src="fotos/produto2.jpeg" onclick="slider(this)"></li>
+        </div><!--row2-->
+
+        <div class="row3">
+            <li><img data-tittle="SHORTS NIKE BRASIL TREINO" data-subtittle="DRI-FIT ACADEMY PRO" data-price="R$218,49"
+                    src="fotos/produto3.jpeg" onclick="slider(this)"></li>
+        </div><!--row3-->
+
+        <div class="row3">
+            <li><img data-tittle="SHORTS NIKE" data-subtittle="STARTING 5" data-price="R$180,49"
+                    src="fotos/produto4.jpeg" onclick="slider(this)"></li>
+        </div><!--row3-->
+
+        <div class="row3">
+            <li><img data-tittle="SHORTS NIKE" data-subtittle="ACG" data-price="R$436,99" src="fotos/produto5.jpeg"
+                    onclick="slider(this)"></li>
+        </div><!--row3-->
+
+        <div class="row3">
+            <li><img data-tittle="SHORTS NIKE SPORTWEAR" data-subtittle="SPORT ESSENTIALS WOVEN" data-price="R$218,49"
+                    src="fotos/produto6.jpeg" onclick="slider(this)"></li>
+        </div><!--row3-->
+    </div><!--main-->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="/sobre-nos">Sobre Nós</a></li>
+                    <li><a href="/contato">Contato</a></li>
+                    <li><a href="/politica-de-privacidade">Política de Privacidade</a></li>
+                    <li><a href="/termos-de-servico">Termos de Serviço</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Siga-nos</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/sualoja" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.twitter.com/sualoja" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/sualoja" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/sualoja" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function slider(anything) {
+            document.querySelector('.one').src = anything.getAttribute('src');;
+            document.querySelector('.tittle').innerHTML = anything.getAttribute('data-tittle');
+            document.querySelector('.subtittle').innerHTML = anything.getAttribute('data-subtittle');
+            document.querySelector('.price').innerHTML = anything.getAttribute('data-price');
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {             
+            document.querySelector('.row li img').dispatchEvent(new Event('click'));
+        });
+    </script>
+</body>
+
+</html>
